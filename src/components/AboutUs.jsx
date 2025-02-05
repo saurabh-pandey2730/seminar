@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className="section-center about-center">
       <div className="about-img">
         <img
-          src="./images/about.jpeg"
+          src="./src/images/about.jpeg"
           className="about-photo"
           alt="awesome beach"
         />
