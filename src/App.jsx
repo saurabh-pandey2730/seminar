@@ -1,11 +1,27 @@
+import AboutUs from "./components/AboutUs"
+import Footer from "./components/Footer"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
+import Service from "./components/Service"
+import Tours from "./components/Tours"
 
 function App() {
   
 
   return (
     <>
-      <h1>hello ever</h1>
-    </>
+    <Navbar/>
+    <Hero/>
+     <AboutUs/>
+     <Service/>
+     <Tours/>
+
+     <Footer/>
+ 
+ 
+</>
+
+   
   )
 }
 
