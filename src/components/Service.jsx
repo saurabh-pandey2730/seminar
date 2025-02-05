@@ -1,3 +1,5 @@
+ import { services } from "../data"
+
 const Service = () => {
   return (
     <section className="section services" id="services">
@@ -7,42 +9,23 @@ const Service = () => {
       </h2>
     </div>
     <div className="section-center services-center">
-      <article className="service">
+   {services.map((service)=>{
+    const {id, icon, title, text} = service
+    return(
+        <article className="service" key={id}>
         <span className="service-icon">
-          <i className="fas fa-wallet fa-fw" />
+          <i className={icon} />
         </span>
         <div className="service-info">
-          <h4 className="service-title">saving money</h4>
-          <p className="service-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            officia.
+          <h4 className="service-title">{title}</h4>
+          <p className="service-text"> {text}
           </p>
         </div>
       </article>
-      <article className="service">
-        <span className="service-icon">
-          <i className="fas fa-tree fa-fw" />
-        </span>
-        <div className="service-info">
-          <h4 className="service-title">endless hiking</h4>
-          <p className="service-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            officia.
-          </p>
-        </div>
-      </article>
-      <article className="service">
-        <span className="service-icon">
-          <i className="fas fa-socks fa-fw" />
-        </span>
-        <div className="service-info">
-          <h4 className="service-title">amazing comfort</h4>
-          <p className="service-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-            officia.
-          </p>
-        </div>
-      </article>
+
+    )
+   })}
+    
     </div>
   </section>
   )
